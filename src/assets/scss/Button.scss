@@ -123,7 +123,6 @@
       width: 50%;
       height: 50%;
     }
-
     .line,
     .start,
     .dot {
@@ -142,7 +141,6 @@
       width: 50%;
       height: 50%;
     }
-
     .line,
     .start,
     .dot {
@@ -174,36 +172,6 @@
       }
     }
   }
-
-  // &.RETRO {
-  //   background-image: url("images/retro_key.png");
-  //   background-size: contain;
-  //   background-repeat: no-repeat;
-
-  //   &.pressed {
-  //     background-image: url("images/retro_key_pressed.png");
-  //     background-size: contain;
-  //     background-repeat: no-repeat;
-  //     background-color: #cc5dff;
-  //     box-shadow: 0px 0px 12px #e5b7fa;
-  //     border-radius: 8px;
-  //     z-index: 1;
-  //   }
-
-  //   .line {
-  //     background-color: #cc5dff;
-  //       opacity: 0.3;
-  //   };
-  //   .dot {
-
-  //     opacity: 0.2;
-
-  //   };
-  //    .start, end {
-  //       opacity: 0.8;
-  //             background-color: #cc5dff;
-  //    }
-  // }
 
   .incoming,
   .outgoing {
@@ -274,4 +242,9 @@
       }
     }
   }
+}
+
+.Button.standard .end svg {
+  max-width: 100%;
+  max-height: 100%;
 }

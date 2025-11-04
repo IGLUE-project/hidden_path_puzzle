@@ -112,7 +112,13 @@ export default function App() {
 
     let DEFAULT_APP_SETTINGS_SKIN = Utils.deepMerge(DEFAULT_APP_SETTINGS, skinSettings);
 
-    if (!_appSettings.mazeBgImg) _appSettings.mazeBgImg = DEFAULT_APP_SETTINGS_SKIN.mazeBgImg;
+    if (_appSettings.backgroundImg === "NONE") {
+      delete _appSettings.backgroundImg;
+    }
+
+    if (_appSettings.mazeBgImg === "NONE") {
+      delete _appSettings.mazeBgImg;
+    }
 
     // Merge _appSettings with DEFAULT_APP_SETTINGS_SKIN to obtain final app settings
     _appSettings = Utils.deepMerge(DEFAULT_APP_SETTINGS_SKIN, _appSettings);

@@ -1,7 +1,7 @@
 import { flagIcon } from "../icons/mazeIcons";
 
 export const DEFAULT_APP_SETTINGS = {
-  skin: "FUTURISTIC",
+  skin: "STANDARD",
   actionWhenLoadingIfSolved: true,
   message: undefined,
   backgroundImg: "",
@@ -18,18 +18,15 @@ export const DEFAULT_APP_SETTINGS = {
 };
 
 export const THEMES = {
-  FUTURISTIC: "FUTURISTIC",
   STANDARD: "STANDARD",
-  RETRO: "RETRO",
   TABLET: "TABLET",
+  RETRO: "RETRO",
+  FUTURISTIC: "FUTURISTIC",
 };
 
 export const THEME_ASSETS = {
-  [THEMES.TABLET]: {
-    backgroundImg: "images/tablet_bg.png",
-    containerImg: "images/tablet_container.png",
-    pointImg: () => flagIcon({ color: "#002a77" }),
-    resetImg: "",
+  [THEMES.STANDARD]: {
+    pointImg: () => flagIcon({ color: "#00ac2bff" }),
     clickAudio: "sounds/click_button.wav",
     failAudio: "sounds/wrong.wav",
     resetAudio: "sounds/reset.wav",
@@ -39,11 +36,11 @@ export const THEME_ASSETS = {
     mazePaddingLeft: "0%",
     mazePaddingRight: "0%",
   },
-  [THEMES.FUTURISTIC]: {
-    backgroundImg: "images/futuristic_bg.png",
-    containerImg: "images/futuristic_container.png",
-    pointImg: () => flagIcon({ color: "#6100ac" }),
-    resetImg: "images/futuristic_reset.png",
+  [THEMES.TABLET]: {
+    backgroundImg: "images/tablet_bg.png",
+    containerImg: "images/tablet_container.png",
+    pointImg: () => flagIcon({ color: "#002a77" }),
+    resetImg: "",
     clickAudio: "sounds/click_button.wav",
     failAudio: "sounds/wrong.wav",
     resetAudio: "sounds/reset.wav",
@@ -67,9 +64,11 @@ export const THEME_ASSETS = {
     mazePaddingLeft: "10%",
     mazePaddingRight: "10%",
   },
-  [THEMES.STANDARD]: {
-    mazeBgImg: "",
-    pointImg: () => flagIcon({ color: "#00ac2bff" }),
+  [THEMES.FUTURISTIC]: {
+    backgroundImg: "images/futuristic_bg.png",
+    containerImg: "images/futuristic_container.png",
+    pointImg: () => flagIcon({ color: "#6100ac" }),
+    resetImg: "images/futuristic_reset.png",
     clickAudio: "sounds/click_button.wav",
     failAudio: "sounds/wrong.wav",
     resetAudio: "sounds/reset.wav",
