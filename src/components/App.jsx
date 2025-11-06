@@ -144,7 +144,7 @@ export default function App() {
   }
 
   function parseSolution(_solutionPath) {
-    return _solutionPath.map((step) => `${step.x + 1},${step.y + 1}`).join(";");
+    return _solutionPath.map((step) => `${step.y + 1},${step.x + 1}`).join(";");
   }
 
   function solvePuzzle(_solution) {

@@ -38,8 +38,8 @@ export default function Button({ isStart, isEnd, x, y, lastButtonClicked, clickB
   function getDirection(previousButton) {
     if (previousButton.x < x) return "left";
     if (previousButton.x > x) return "right";
-    if (previousButton.y < y) return "top";
-    if (previousButton.y > y) return "bottom";
+    if (previousButton.y < y) return "bottom";
+    if (previousButton.y > y) return "top";
     return "";
   }
 
