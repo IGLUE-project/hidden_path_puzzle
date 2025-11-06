@@ -60,9 +60,9 @@ export const THEME_ASSETS = {
     resetAudio: "sounds/reset.wav",
     correctAudio: "sounds/correct.wav",
     mazePaddingTop: "7%",
-    mazePaddingBottom: "4%",
-    mazePaddingLeft: "10%",
-    mazePaddingRight: "10%",
+    mazePaddingBottom: "6%",
+    mazePaddingLeft: "6%",
+    mazePaddingRight: "6%",
   },
   [THEMES.FUTURISTIC]: {
     backgroundImg: "images/futuristic_bg.png",

@@ -9,8 +9,7 @@ export default function Maze({ lastButtonClicked, clickButton, mazeMap, theme, s
   const style = hasBg
     ? {
         backgroundImage: `url(${theme.mazeBgImg})`,
-        width: size.width * 0.75,
-        height: size.height * 0.75,
+
         padding: `${theme.mazePaddingTop} ${theme.mazePaddingRight} ${theme.mazePaddingBottom} ${theme.mazePaddingLeft}`,
       }
     : {};
