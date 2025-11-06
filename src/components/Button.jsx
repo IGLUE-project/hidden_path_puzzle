@@ -80,21 +80,12 @@ export default function Button({ isStart, isEnd, x, y, lastButtonClicked, clickB
         height: buttonSize,
         width: buttonSize,
         margin: marginValue,
-        opacity: theme.skin === THEMES.FUTURISTIC && theme.mazeBgImg ? 0.7 : 1,
+        opacity: theme.skin === THEMES.FUTURISTIC && theme.mazeBgImg ? (pressed ? 0.7 : 0.5) : 1,
       }}
       className={`Button ${pressed ? "pressed " : ""}${theme.skin.toLowerCase()}`}
     >
       {isStart && theme.showStart && (
-        <div className="start">
-          <p
-            style={{
-              position: "absolute",
-              top: buttonSize * -0.23,
-              left: buttonSize * 0.1,
-              fontSize: buttonSize * 0.25,
-            }}
-          ></p>
-        </div>
+        <div style={{ backgroundColor: pressed ? theme.lineColor : undefined }} className="start"></div>
       )}
       {isEnd && theme.showEnd && (
         <>
@@ -103,32 +94,16 @@ export default function Button({ isStart, isEnd, x, y, lastButtonClicked, clickB
           ) : (
             <img src={theme.pointImg} className="end" />
           )}
-
-          <p
-            style={{
-              position: "absolute",
-              top: buttonSize * 0.38,
-              left: buttonSize * 0.25,
-              fontSize: buttonSize * 0.25,
-            }}
-          ></p>
         </>
       )}
-      {incomingDirection && <div className={`line incoming ${incomingDirection}`} />}
-      {!incomingDirection && pressed && !theme.showStart && (
-        <div className="start">
-          <p
-            style={{
-              position: "absolute",
-              top: buttonSize * -0.23,
-              left: buttonSize * 0.1,
-              fontSize: buttonSize * 0.25,
-            }}
-          ></p>
-        </div>
+      {incomingDirection && (
+        <div style={{ backgroundColor: theme.lineColor }} className={`line incoming ${incomingDirection}`} />
       )}
-      {incomingDirection && outgoingDirection && <div className="dot" />}
-      {outgoingDirection && <div className={`line outgoing ${outgoingDirection}`} />}
+
+      {incomingDirection && outgoingDirection && <div style={{ backgroundColor: theme.lineColor }} className="dot" />}
+      {outgoingDirection && (
+        <div style={{ backgroundColor: theme.lineColor }} className={`line outgoing ${outgoingDirection}`} />
+      )}
     </div>
   );
 }
