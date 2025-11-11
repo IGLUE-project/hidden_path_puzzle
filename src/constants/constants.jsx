@@ -56,7 +56,7 @@ export const THEME_ASSETS = {
     pointImg: "images/start-point.png",
     resetImg: "images/retro_reset.png",
     clickAudio: "sounds/pencil.wav",
-    failAudio: "sounds/wrong.wav",
+    failAudio: "sounds/tearing-paper.wav",
     resetAudio: "sounds/reset.wav",
     correctAudio: "sounds/correct.wav",
     mazePaddingTop: "7%",
