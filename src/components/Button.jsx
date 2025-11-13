@@ -13,8 +13,25 @@ export default function Button({ isStart, isEnd, x, y, lastButtonClicked, clickB
       size.width / (mazeMap ? mazeMap.length : 1),
       size.height / (mazeMap[0] ? mazeMap[0].length : 1),
     );
-    if (theme.skin === THEMES.FUTURISTIC) setbuttonSize(_buttonSize * 0.72);
-    else setbuttonSize(_buttonSize * 0.75);
+
+    let sizeMultiplier = 0.75;
+
+    switch (theme.skin) {
+      case THEMES.RETRO:
+        sizeMultiplier = 0.75;
+        break;
+      case THEMES.STANDARD:
+        sizeMultiplier = 0.69;
+        break;
+      case THEMES.FUTURISTIC:
+        sizeMultiplier = 0.72;
+        break;
+      case THEMES.TABLET:
+        sizeMultiplier = 0.69;
+        break;
+    }
+
+    setbuttonSize(_buttonSize * sizeMultiplier);
   }, [size]);
 
   const pressButton = () => {

@@ -20,7 +20,7 @@ export default function Maze({ lastButtonClicked, clickButton, mazeMap, theme, s
         className={`Maze ${hasBg ? "BgImg" : ""}`}
         style={{
           ...style,
-          marginTop: theme.skin === THEMES.TABLET || theme.skin === THEMES.STANDARD ? "4%" : 0,
+          marginTop: theme.skin === THEMES.TABLET || theme.skin === THEMES.STANDARD ? "3%" : 0,
           marginRight: theme.skin === THEMES.FUTURISTIC ? "6%" : 0,
         }}
       >
