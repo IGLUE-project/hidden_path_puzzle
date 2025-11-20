@@ -80,19 +80,6 @@ export default function MainScreen({ lastButtonClicked, clickButton, resetButton
             </div>
           </div>
         )}
-        {config?.backgroundImg && (
-          <img
-            className="keypad"
-            src={config?.backgroundImg}
-            alt=""
-            draggable={false}
-            style={{
-              width: size.width,
-              height: size.height,
-              zIndex: 50,
-            }}
-          />
-        )}
       </div>
     </div>
   );

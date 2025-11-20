@@ -88,16 +88,6 @@ export default function App() {
 
   function restoreAppState(erState) {
     Utils.log("Restore application state based on escape room state:", erState);
-    const _settings = escapp.getSettings();
-
-    if (!_settings.linkedPuzzleIds || _settings.linkedPuzzleIds.length === 0) {
-      setAppSettings((prevSettings) => {
-        return {
-          ...prevSettings,
-          disableButton: true,
-        };
-      });
-    }
   }
 
   function processAppSettings(_appSettings) {
@@ -249,7 +239,10 @@ export default function App() {
     {
       id: MAIN_SCREEN,
       content: (
-        <div className={`main-background ${failClass}`}>
+        <div
+          className={`main-background ${failClass}`}
+          style={{ backgroundImage: `url(${appSettings?.backgroundImg})` }}
+        >
           <audio id="audio_failure" src={appSettings?.failAudio} autostart="false" preload="auto" />
           <audio id="audio_correct" src={appSettings?.correctAudio} autostart="false" preload="auto" />
           <audio id="audio_reset" src={appSettings?.resetAudio} autostart="false" preload="auto" />
