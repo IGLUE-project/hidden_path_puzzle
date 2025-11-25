@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { GlobalContext } from "./GlobalContext.jsx";
 import "./../assets/scss/MainScreen.scss";
 import Maze from "./Maze";
 
+
 export default function MainScreen({ lastButtonClicked, clickButton, resetButton, mazeMap, config, sendSolution }) {
+  const { I18n } = useContext(GlobalContext);
   const [size, setSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -76,7 +79,7 @@ export default function MainScreen({ lastButtonClicked, clickButton, resetButton
                 fontSize: size.width * 0.015 + "px",
               }}
             >
-              Reset
+              {I18n.getTrans("i.reset")}
             </div>
           </div>
         )}
