@@ -101,9 +101,10 @@ export default function Button({ isStart, isEnd, x, y, lastButtonClicked, clickB
       }}
       className={`Button ${pressed ? "pressed " : ""}${theme.skin.toLowerCase()}`}
     >
-      {isStart && theme.showStart && (
-        <div style={{ backgroundColor: pressed ? theme.lineColor : undefined }} className="start"></div>
-      )}
+      {(isStart && theme.showStart) ||
+        (!theme.showStart && pressed && !incomingDirection && (
+          <div style={{ backgroundColor: pressed ? theme.lineColor : undefined }} className="start"></div>
+        ))}
       {isEnd && theme.showEnd && (
         <>
           {typeof theme.pointImg === "function" ? (

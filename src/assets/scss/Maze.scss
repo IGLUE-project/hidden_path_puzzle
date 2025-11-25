@@ -40,28 +40,30 @@
   transform: scale(0.9);
   transition: opacity 0.4s ease, transform 0.4s ease;
   position: absolute;
-  width: 45%;
-  height: 30%;
-  background-color: #4560aa;
+  width: 75%;
+  height: 55%;
+  background-color: #4560ee;
   display: flex;
   align-items: center;
   justify-content: center;
   border: #1f315e 10px solid;
   border-radius: 10px;
   z-index: -1;
+  font-size: clamp(2px, 2vw, 32px);
   button {
     background-color: #1f315e;
   }
 }
+
 .retro .victory {
-  background-color: #865e35cf;
+  background-color: #865d35ee;
   border: #5a3e24aa 10px solid;
   button {
     background-color: #5a3e24aa;
   }
 }
 .futuristic .victory {
-  background-color: #006518cf;
+  background-color: #006518ee;
   border: #001c00aa 10px solid;
   button {
     background-color: #001c00aa;
@@ -80,7 +82,6 @@
     transform: scale(1);
     z-index: 150;
     div {
-      padding: 5%;
       text-align: center;
     }
   }
