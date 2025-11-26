@@ -96,10 +96,13 @@ export default function Button({ isStart, isEnd, x, y, lastButtonClicked, clickB
       style={{
         height: buttonSize,
         width: buttonSize,
-        margin: marginValue,
-        opacity: theme.skin === THEMES.FUTURISTIC && theme.mazeBgImg ? (pressed ? 0.7 : 0.5) : 1,
+        margin: marginValue
       }}
-      className={`Button ${pressed ? "pressed " : ""}${theme.skin.toLowerCase()}`}
+      className={`Button 
+        ${pressed ? "pressed " : ""} 
+        ${theme.skin.toLowerCase()} 
+        ${theme.mazeBgImg ? "withMazeBackground" : ""}
+      `}
     >
       {(isStart && theme.showStart) ||
         (!theme.showStart && pressed && !incomingDirection && (

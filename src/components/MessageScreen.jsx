@@ -6,7 +6,7 @@ export default function MessageScreen({ sendSolution }) {
 
   return (
     <div className="MessageScreen">
-      <p>{appSettings.message}</p>
+      <pre>{appSettings.message}</pre>
       <div>
         <button style={{ padding: "10px 20px", marginTop: "20px", cursor: "pointer" }} onClick={() => sendSolution()}>
           {I18n.getTrans("i.continue")}
