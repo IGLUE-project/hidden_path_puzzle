@@ -109,11 +109,28 @@ export default function App() {
     if (_appSettings.mazeBgImg === "NONE") {
       delete _appSettings.mazeBgImg;
     }
+
     _appSettings.showStart = _appSettings.showStart === true || _appSettings.showStart === "TRUE";
     _appSettings.showEnd = _appSettings.showEnd === true || _appSettings.showEnd === "TRUE";
 
     // Merge _appSettings with DEFAULT_APP_SETTINGS_SKIN to obtain final app settings
     _appSettings = Utils.deepMerge(DEFAULT_APP_SETTINGS_SKIN, _appSettings);
+
+
+    if(typeof _appSettings.startPoint === "undefined"){
+      _appSettings.startPoint = { x: 1, y: 1 };
+    }
+
+    if(typeof _appSettings.endPoint === "undefined"){
+      _appSettings.endPoint = { x: _appSettings.mazeWidth, y: _appSettings.mazeHeight };
+    }
+
+    try {
+      _appSettings.startPoint.x = Math.max(1,Math.min(parseInt(_appSettings.startPoint.x),_appSettings.mazeWidth));
+      _appSettings.startPoint.y = Math.max(1,Math.min(parseInt(_appSettings.startPoint.y),_appSettings.mazeHeight));
+      _appSettings.endPoint.x = Math.max(1,Math.min(parseInt(_appSettings.endPoint.x),_appSettings.mazeWidth));
+      _appSettings.endPoint.y = Math.max(1,Math.min(parseInt(_appSettings.endPoint.y),_appSettings.mazeHeight));
+    } catch(e){};
 
     generateMazeMap(_appSettings.mazeHeight, _appSettings.mazeWidth);
 

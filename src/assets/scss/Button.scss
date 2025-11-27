@@ -86,11 +86,11 @@
   }
 
   &.futuristic {
-    background-image: url("images/futuristic_key.png");
+    background-image: url("/images/futuristic_key.png");
     background-size: contain;
     background-repeat: no-repeat;
     &.pressed {
-      background-image: url("images/futuristic_key_pressed.png");
+      background-image: url("/images/futuristic_key_pressed.png");
       background-size: contain;
       background-repeat: no-repeat;
     }

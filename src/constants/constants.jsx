@@ -2,19 +2,21 @@ import { flagIcon } from "../icons/mazeIcons";
 
 export const DEFAULT_APP_SETTINGS = {
   skin: "STANDARD",
+  backgroundImg: "",
   actionWhenLoadingIfSolved: true,
   message: undefined,
-  backgroundImg: "",
+  mazeWidth: 8,
+  mazeHeight: 4,
+  showStart: true,
+  showEnd: true,
   resetImg: "",
-  clickAudio: "sounds/click_button.wav",
-  failAudio: "sounds/wrong.wav",
-  correctAudio: "sounds/correct.wav",
   mazePaddingTop: "0%",
   mazePaddingBottom: "0%",
   mazePaddingLeft: "0%",
   mazePaddingRight: "0%",
-  showStart: true,
-  showEnd: true,
+  clickAudio: "sounds/click_button.wav",
+  failAudio: "sounds/wrong.wav",
+  correctAudio: "sounds/correct.wav",
 };
 
 export const THEMES = {
