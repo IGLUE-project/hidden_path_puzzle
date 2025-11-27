@@ -62,7 +62,7 @@
   justify-content: center;
   font-size: 3vh;
   border-radius: 4px;
-
+  opacity: 1;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.1s;
   position: relative;
@@ -94,10 +94,9 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
-
     .line {
       background-color: #cc5dff;
-      opacity: 0.3;
+      opacity: 0.5;
     }
     .dot {
       opacity: 0.2;
@@ -109,6 +108,18 @@
     .end {
       width: 50%;
       height: 50%;
+    }
+    &.withMazeBackground {
+      opacity: 0.3;
+      &.pressed {
+        opacity: 0.4;
+      }
+      .line {
+        opacity: 1;
+      }
+      .start {
+        opacity: 1;
+      }
     }
   }
   &.tablet {

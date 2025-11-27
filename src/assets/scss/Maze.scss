@@ -55,20 +55,48 @@
   }
 }
 
+.standard .victory, .tablet .victory {
+  button {
+    color: #aaa;
+  }
+  button:hover {
+    border-color: #aaa;
+  }
+  div.MessageScreen {
+    color: #222;
+  }
+}
+
 .retro .victory {
   background-color: #865d35ee;
   border: #5a3e24aa 10px solid;
   button {
+    color: #111;
     background-color: #5a3e24aa;
   }
+  button:hover {
+    border-color: #111;
+  }
+  div.MessageScreen {
+    color: #000;
+  }
 }
+
 .futuristic .victory {
   background-color: #006518ee;
   border: #001c00aa 10px solid;
   button {
     background-color: #001c00aa;
+    color: #ccc;
+  }
+  button:hover {
+    border-color: #ccc;
+  }
+  div.MessageScreen {
+    color: black;
   }
 }
+
 .correct {
   .Maze {
     display: none;
