@@ -2,14 +2,15 @@ import { flagIcon } from "../icons/mazeIcons";
 
 export const DEFAULT_APP_SETTINGS = {
   skin: "STANDARD",
-  backgroundImg: "",
+  backgroundImg: undefined,
+  containerImg: undefined,
   actionWhenLoadingIfSolved: true,
   message: undefined,
   mazeWidth: 8,
   mazeHeight: 4,
   showStart: true,
   showEnd: true,
-  resetImg: "",
+  resetImg: undefined,
   mazePaddingTop: "0%",
   mazePaddingBottom: "0%",
   mazePaddingLeft: "0%",

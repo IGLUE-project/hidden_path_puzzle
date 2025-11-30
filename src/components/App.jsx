@@ -97,6 +97,12 @@ export default function App() {
     if (typeof _appSettings.skin === "undefined" && typeof DEFAULT_APP_SETTINGS.skin === "string") {
       _appSettings.skin = DEFAULT_APP_SETTINGS.skin;
     }
+    if ((typeof _appSettings.backgroundImg !== "string")||(_appSettings.backgroundImg.trim()==="")){
+      delete _appSettings.backgroundImg;
+    }
+    if ((typeof _appSettings.mazeBgImg !== "string")||(_appSettings.mazeBgImg.trim()==="")){
+      delete _appSettings.mazeBgImg;
+    }
 
     let skinSettings = THEME_ASSETS[_appSettings.skin] || {};
 
@@ -258,7 +264,9 @@ export default function App() {
       content: (
         <div
           className={`main-background ${failClass}`}
-          style={{ backgroundImage: `url(${appSettings?.backgroundImg})` }}
+          {...(appSettings?.backgroundImg && {
+            style: { backgroundImage: `url(${appSettings.backgroundImg})` }
+          })}
         >
           <audio id="audio_failure" src={appSettings?.failAudio} autostart="false" preload="auto" />
           <audio id="audio_correct" src={appSettings?.correctAudio} autostart="false" preload="auto" />

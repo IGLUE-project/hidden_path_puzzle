@@ -64,7 +64,9 @@ export default function MainScreen({ lastButtonClicked, clickButton, resetButton
           <div
             className="background"
             style={{
-              backgroundImage: `url(${config?.containerImg})`,
+              ...(config?.containerImg && {
+                backgroundImage: `url(${config.containerImg})`,
+              }),
               zIndex: 100,
             }}
           ></div>
