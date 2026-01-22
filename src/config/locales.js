@@ -10,8 +10,8 @@ export let LOCALES = {
     "i.reset":    "Reiniciar",
   },
   sr: {
-    "i.message": "You've found the path! \n Click 'Continue' to advance to the next puzzle.",
-    "i.continue": "Continue",
-    "i.reset":    "Reset",
+    "i.message": "Uspešno ste ovo rešili! \n Kliknite na 'Nastavi' da biste prešli na sledeću zagonetku.",
+    "i.continue": "Nastavi",
+    "i.reset":    "Resetuj",
   },
 };
