@@ -97,31 +97,24 @@ export default function App() {
     if (typeof _appSettings.skin === "undefined" && typeof DEFAULT_APP_SETTINGS.skin === "string") {
       _appSettings.skin = DEFAULT_APP_SETTINGS.skin;
     }
-    if ((typeof _appSettings.backgroundImg !== "string")||(_appSettings.backgroundImg.trim()==="")){
-      delete _appSettings.backgroundImg;
-    }
-    if ((typeof _appSettings.mazeBgImg !== "string")||(_appSettings.mazeBgImg.trim()==="")){
-      delete _appSettings.mazeBgImg;
-    }
 
     let skinSettings = THEME_ASSETS[_appSettings.skin] || {};
-
     let DEFAULT_APP_SETTINGS_SKIN = Utils.deepMerge(DEFAULT_APP_SETTINGS, skinSettings);
-
-    if (_appSettings.backgroundImg === "NONE") {
-      delete _appSettings.backgroundImg;
-    }
-
-    if (_appSettings.mazeBgImg === "NONE") {
-      delete _appSettings.mazeBgImg;
-    }
-
-    _appSettings.showStart = _appSettings.showStart === true || _appSettings.showStart === "TRUE";
-    _appSettings.showEnd = _appSettings.showEnd === true || _appSettings.showEnd === "TRUE";
 
     // Merge _appSettings with DEFAULT_APP_SETTINGS_SKIN to obtain final app settings
     _appSettings = Utils.deepMerge(DEFAULT_APP_SETTINGS_SKIN, _appSettings);
 
+    if ((typeof _appSettings.backgroundImg !== "string")||(_appSettings.backgroundImg.trim()==="")||(_appSettings.backgroundImg === "NONE")){
+      delete _appSettings.backgroundImg;
+    }
+    if ((typeof _appSettings.mazeBgImg !== "string")||(_appSettings.mazeBgImg.trim()==="")||(_appSettings.mazeBgImg === "NONE")){
+      delete _appSettings.mazeBgImg;
+    }
+
+    _appSettings.showFrame = (_appSettings.skin==="STANDARD");
+
+    _appSettings.showStart = _appSettings.showStart === true || _appSettings.showStart === "TRUE";
+    _appSettings.showEnd = _appSettings.showEnd === true || _appSettings.showEnd === "TRUE";
 
     if(typeof _appSettings.startPoint === "undefined"){
       _appSettings.startPoint = { x: 1, y: 1 };

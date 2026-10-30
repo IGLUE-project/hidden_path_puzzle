@@ -49,7 +49,7 @@ export default function MainScreen({ lastButtonClicked, clickButton, resetButton
     >
       <audio id="audio_click" src={config.clickAudio} autostart="false" preload="auto" />
       <div
-        className={`${config?.backgroundImg ? "image" : "frame"}`}
+        className={`${config?.showFrame ? "frame" : "image"}`}
         style={{ width: size.width, height: size.height }}
       >
         <div className="border-frame">
